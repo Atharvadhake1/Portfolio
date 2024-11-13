@@ -365,6 +365,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-color: black;
 }
 
+.project .row {
+  align-items: center;
+  margin-top: 20px;
+}
+
 .project h2 {
   font-size: 45px;
   font-weight: 700;
@@ -373,13 +378,26 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .project p {
   color: #B8B8B8;
-  font-size: 18px;
+  font-size: 1rem;
   letter-spacing: 0.8px;
   line-height: 1.5em;
   margin: 14px auto 30px auto;
   text-align: center;
   width: 60%; /* Slightly increased width for better readability */
 }
+
+
+.project h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.project img {
+  border-radius: 10px;
+}
+
 
 .project .nav.nav-pills {
   width: 60%;
