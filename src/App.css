@@ -381,17 +381,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 1rem;
   letter-spacing: 0.8px;
   line-height: 1.5em;
-  margin: 14px auto 30px auto;
-  text-align: center;
+  text-align:left ;
   width: 60%; /* Slightly increased width for better readability */
 }
 
 
-.project h3 {
-  font-size: 1.8rem;
+.project h1 {
+  font-size: 2.8rem;
   font-weight: bold;
-  color: #333;
-  margin-bottom: 15px;
+  color: #ffffff;
+  margin-bottom: 95px;
+  margin-left:50px;
 }
 
 .project img {
@@ -531,9 +531,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #FFFFFF; /* Ensures text is visible on black background */
 }
 
-.proj-imgbx {
-  text-align: center; /* Center the image */
-}
 
 .proj-imgbx img {
   max-width: 100%; /* Ensure the image doesn't exceed its container */
@@ -545,9 +542,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #ffffff; /* Change text color if needed */
 }
 
-.proj-txtx h4 {
-  margin-bottom: 10px; /* Space below title */
-}
+
 
 .proj-txtx p {
   margin-bottom: 10px; /* Space below description */

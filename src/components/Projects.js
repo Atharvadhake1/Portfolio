@@ -84,7 +84,7 @@ export const Projects = () => {
                                 </Col>
                                 <Col md={6}>
                                   <div>
-                                    <h3>{project.title}</h3>
+                                    <h1>{project.title}</h1>
                                     <p>{project.description}</p>
                                   </div>
                                 </Col>
