@@ -95,6 +95,32 @@ export const Projects = () => {
                       </Tab.Pane>
                       <Tab.Pane eventKey="second">
                         <p>Design-related projects and concepts.</p>
+                        <Carousel
+                          interval={5000}
+                          pause="hover"
+                          controls={true}
+                          indicators={true}
+                        >
+                          {projects.map((project, index) => (
+                            <Carousel.Item key={index}>
+                              <Row className="align-items-center">
+                                <Col md={6}>
+                                  <img
+                                    src={project.imgUrl}
+                                    alt={project.title}
+                                    className="img-fluid"
+                                  />
+                                </Col>
+                                <Col md={6}>
+                                  <div>
+                                    <h3>{project.title}</h3>
+                                    <p>{project.description}</p>
+                                  </div>
+                                </Col>
+                              </Row>
+                            </Carousel.Item>
+                          ))}
+                        </Carousel>
                       </Tab.Pane>
                     </Tab.Content>
                   </Tab.Container>
