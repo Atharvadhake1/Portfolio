@@ -4,11 +4,17 @@ import colorSharp2 from "../assets/img/color-sharp2.png";
 import algomania from "../assets/img/algomania.png";
 import realEstate from "../assets/img/realEstate.png";
 import virtualLab from "../assets/img/virtualLab.png";
+import design1 from "../assets/img/Frame 9.png"; // Example design images
+import design2 from "../assets/img/Frame 1.png";
+import design3 from "../assets/img/Home Page.png";
+import design4 from "../assets/img/Home.png";
+import design5 from "../assets/img/Frame 1 (2).png";
+import design6 from "../assets/img/2.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 
 export const Projects = () => {
-  const projects = [
+  const webProjects = [
     {
       title: "Algomania",
       description:
@@ -27,6 +33,39 @@ export const Projects = () => {
         "A virtual platform for students to conduct simulated experiments.",
       imgUrl: virtualLab,
     },
+  ];
+
+  const designProjects = [
+    {
+      title: "Design 1",
+      description: "A creative UI/UX design for a mobile app.",
+      imgUrl: design1,
+    },
+    {
+      title: "Design 2",
+      description: "Logo and branding design for a tech startup.",
+      imgUrl: design2,
+    },
+    {
+      title: "Design 3",
+      description: "Web layout design with responsive elements.",
+      imgUrl: design3,
+    },
+    {
+      title: "Design 4",
+      description: "A modern UI/UX design for a web application.",
+      imgUrl: design4,
+    },
+    {
+      title: "Design 5",
+      description: "A creative UI/UX design for a mobile app.",
+      imgUrl: design5,
+    },    
+    {
+      title: "Design 6",
+      description: "Logo and branding design for a tech startup.",
+      imgUrl: design6,
+    }
   ];
 
   return (
@@ -56,7 +95,7 @@ export const Projects = () => {
                         <Nav.Link eventKey="first">WEB PROJECTS</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="second">Design</Nav.Link>
+                        <Nav.Link eventKey="second">DESIGN</Nav.Link>
                       </Nav.Item>
                     </Nav>
                     <Tab.Content
@@ -65,6 +104,7 @@ export const Projects = () => {
                         isVisible ? "animate__animated animate__slideInUp" : ""
                       }
                     >
+                      {/* WEB PROJECTS */}
                       <Tab.Pane eventKey="first">
                         <Carousel
                           interval={5000}
@@ -72,7 +112,7 @@ export const Projects = () => {
                           controls={true}
                           indicators={true}
                         >
-                          {projects.map((project, index) => (
+                          {webProjects.map((project, index) => (
                             <Carousel.Item key={index}>
                               <Row className="align-items-center">
                                 <Col md={6}>
@@ -93,35 +133,31 @@ export const Projects = () => {
                           ))}
                         </Carousel>
                       </Tab.Pane>
-                      <Tab.Pane eventKey="second">
-                        <p>Design-related projects and concepts.</p>
-                        <Carousel
-                          interval={5000}
-                          pause="hover"
-                          controls={true}
-                          indicators={true}
-                        >
-                          {projects.map((project, index) => (
-                            <Carousel.Item key={index}>
-                              <Row className="align-items-center">
-                                <Col md={6}>
-                                  <img
-                                    src={project.imgUrl}
-                                    alt={project.title}
-                                    className="img-fluid"
-                                  />
-                                </Col>
-                                <Col md={6}>
-                                  <div>
-                                    <h3>{project.title}</h3>
-                                    <p>{project.description}</p>
-                                  </div>
-                                </Col>
-                              </Row>
-                            </Carousel.Item>
-                          ))}
-                        </Carousel>
-                      </Tab.Pane>
+
+                      {/* DESIGN */}
+                      {/* DESIGN */} 
+<Tab.Pane eventKey="second">
+  <div className="design-section">
+    <Row className="flex-column align-items-center g-4">
+      {designProjects.map((project, index) => (
+        <Col key={index} className="d-flex justify-content-center">
+          <div className="design-card">
+            <img
+              src={project.imgUrl}
+              alt={project.title}
+              className="design-img"
+            />
+            <div className="project-details">
+              <h4>{project.title}</h4>
+              <p>{project.description}</p>
+            </div>
+          </div>
+        </Col>
+      ))}
+    </Row>
+  </div>
+</Tab.Pane>
+
                     </Tab.Content>
                   </Tab.Container>
                 </div>

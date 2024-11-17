@@ -530,7 +530,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #FFFFFF; /* Ensures text is visible on black background */
 }
 
-
 .proj-imgbx img {
   max-width: 100%; /* Ensure the image doesn't exceed its container */
   height: auto; /* Maintain aspect ratio */
@@ -541,10 +540,66 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #ffffff; /* Change text color if needed */
 }
 
-
-
 .proj-txtx p {
   margin-bottom: 10px; /* Space below description */
+}
+
+/* Card hover effect */
+.design-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Main container for the design section */
+.design-section {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap onto the next line */
+  gap: 20px; /* Space between items */
+  justify-content: center; /* Center the items horizontally */
+}
+
+/* Each design card wrapper */
+.design-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%; /* By default, cards will take full width */
+  max-width: 500px; /* Increased max width for the cards */
+  margin: 10px;
+  background-color: #3a3a3c;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+/* Design image */
+.design-img {
+  width: 100%; /* Makes the image take full width of the container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  margin-bottom: 10px;
+}
+
+/* Text styling inside the project details */
+.project-details h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.project-details p {
+  font-size: 1rem;
+  color: #b0bec5;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 767px) {
+  .design-card {
+    width: 100%; /* Make cards take full width on smaller screens */
+    max-width: none; /* Allow cards to take full width on mobile */
+  }
 }
 
 
