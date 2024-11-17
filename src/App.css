@@ -544,31 +544,28 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-bottom: 10px; /* Space below description */
 }
 
-/* Card hover effect */
-.design-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
 /* Main container for the design section */
 .design-section {
-  display: flex;
-  flex-wrap: wrap; /* Allow items to wrap onto the next line */
-  gap: 20px; /* Space between items */
-  justify-content: center; /* Center the items horizontally */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px; /* Center the items horizontally */
 }
 
 /* Each design card wrapper */
 .design-card {
+  border-radius: 15px;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 1px 1px 4px #fff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%; /* By default, cards will take full width */
   max-width: 500px; /* Increased max width for the cards */
   margin: 10px;
-  background-color: #3a3a3c;
+  background-color:#121212;
   border: 1px solid #ddd;
-  border-radius: 8px;
   padding: 20px;
   text-align: center;
   transition: transform 0.3s ease;
@@ -580,6 +577,55 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   height: auto; /* Maintain aspect ratio */
   object-fit: cover; /* Ensures the image covers the area without distortion */
   margin-bottom: 10px;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.design-details
+{
+  width: 100%;
+	height: 0;
+	background: linear-gradient(transparent,#342650 90%);
+	border-radius: 10px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 40px;
+	text-align: center;
+	font-size: 14px;
+	transition: height 0.5s;
+}
+
+.design-details h4 {
+	font-weight: bolder;
+	margin-bottom: 5px;
+	margin-top: 80%;
+	font-size: 30px;
+	letter-spacing: 2px;
+}
+
+
+.design-card:hover img{
+    transform: scale(1.2);
+}
+.design-card:hover .design-details{
+    height: 200%;
+}
+.design-details a {
+	margin-top: 10px;
+	color: #262626;
+	text-decoration: none;
+	font-size: 14px;
+	background: #fff;
+	border-radius: 50px;
+	text-align: center;
+	padding: 5px 15px;
 }
 
 /* Text styling inside the project details */
