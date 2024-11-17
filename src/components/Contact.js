@@ -148,7 +148,7 @@ export const Contact = () => {
           </Col>
         </Row>
       </Container>
-      <ToastContainer /> {/* This is where the toast notifications will show up */}
+      <ToastContainer /> 
     </section>
   );
 };
