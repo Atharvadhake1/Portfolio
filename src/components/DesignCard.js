@@ -5,6 +5,7 @@ export const DesignCard = ({ title, description, imgUrl }) => {
       <div className="design-details">
         <h5>{title}</h5>
         <p>{description}</p>
+        <a href="#">Figma</a>
       </div>
     </div>
   );

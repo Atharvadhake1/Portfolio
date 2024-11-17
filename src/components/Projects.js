@@ -60,12 +60,12 @@ export const Projects = () => {
       title: "Design 5",
       description: "A creative UI/UX design for a mobile app.",
       imgUrl: design5,
-    },    
+    },
     {
       title: "Design 6",
       description: "Logo and branding design for a tech startup.",
       imgUrl: design6,
-    }
+    },
   ];
 
   return (
@@ -135,29 +135,35 @@ export const Projects = () => {
                       </Tab.Pane>
 
                       {/* DESIGN */}
-                      {/* DESIGN */} 
-<Tab.Pane eventKey="second">
-  <div className="design-section">
-    <Row className="flex-column align-items-center g-4">
-      {designProjects.map((project, index) => (
-        <Col key={index} className="d-flex justify-content-center">
-          <div className="design-card">
-            <img
-              src={project.imgUrl}
-              alt={project.title}
-              className="design-img"
-            />
-            <div className="project-details">
-              <h4>{project.title}</h4>
-              <p>{project.description}</p>
-            </div>
-          </div>
-        </Col>
-      ))}
-    </Row>
-  </div>
-</Tab.Pane>
-
+                      {/* DESIGN */}
+                      <Tab.Pane eventKey="second">
+                        <div className="design-section">
+                          <Row className="g-4">
+                            {designProjects.map((project, index) => (
+                              <Col
+                                key={index}
+                                md={4}
+                                className="d-flex justify-content-center"
+                              >
+                                <div className="design-card">
+                                  <img
+                                    src={project.imgUrl}
+                                    alt={project.title}
+                                    className="design-img"
+                                  />
+                                  <div className="design-details">
+                                    <h4>{project.title}</h4>
+                                    <p className="design-description">
+                                      {project.description}
+                                    </p>
+                                    <a href="#"> Figma </a>
+                                  </div>
+                                </div>
+                              </Col>
+                            ))}
+                          </Row>
+                        </div>
+                      </Tab.Pane>
                     </Tab.Content>
                   </Tab.Container>
                 </div>
