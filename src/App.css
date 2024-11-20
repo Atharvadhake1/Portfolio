@@ -390,7 +390,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 2.8rem;
   font-weight: bold;
   color: #ffffff;
-  margin-bottom: 95px;
+  margin-bottom:150px;
   margin-left:50px;
 }
 
@@ -431,7 +431,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: absolute;
   width: 0;
   height: 100%;
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
   top: 0;
   left: 0;
   z-index: -1;
@@ -544,6 +543,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-bottom: 10px; /* Space below description */
 }
 
+.vertical-line {
+  width: 2px; /* Thickness of the line */
+  background-color: #ccc; /* Adjust color as needed */
+  height: 80%; /* Adjust height relative to the container */
+  margin: 0 20px; /* Spacing on both sides */
+}
+
+.project-content-wrapper {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  justify-content: center; /* Adjust horizontal alignment */
+}
+
 /* Main container for the design section */
 .design-section {
   display: grid;
@@ -586,7 +598,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 {
   width: 100%;
 	height: 0;
-	background: linear-gradient(transparent,#342650 90%);
+	background: linear-gradient(transparent,#242424 90%);
 	border-radius: 10px;
 	position: absolute;
 	left: 0;
@@ -610,12 +622,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	letter-spacing: 2px;
 }
 
-
 .design-card:hover img{
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 .design-card:hover .design-details{
-    height: 200%;
+    height: 150%;
 }
 .design-details a {
 	margin-top: 10px;
@@ -646,6 +657,29 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     width: 100%; /* Make cards take full width on smaller screens */
     max-width: none; /* Allow cards to take full width on mobile */
   }
+}
+
+.carousel-indicators{
+  margin: 50px;
+}
+
+.custom-carousel .carousel-control-prev,
+.custom-carousel .carousel-control-next {
+  width: auto; /* Reset default width */
+}
+
+.custom-carousel .carousel-control-prev {
+  left: -50px; /* Move the button further to the left */
+}
+
+.custom-carousel .carousel-control-next {
+  right: -50px; /* Move the button further to the right */
+}
+
+.custom-carousel .carousel-control-prev-icon,
+.custom-carousel .carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: Style the icons */
+  border-radius: 50%; /* Optional: Make them circular */
 }
 
 
@@ -873,6 +907,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 50%;  /* Set the image to take up half the size of the circle */
   height: 50%; /* Same as width to maintain aspect ratio */
   object-fit: contain;  /* Ensure the logo fits inside the circle */
+}
+
+.social-icon a {
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.social-icon a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1); /* Slightly increase the size */
 }
 .text-start p{
   font-size:medium;

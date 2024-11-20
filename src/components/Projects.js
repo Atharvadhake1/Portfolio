@@ -5,7 +5,7 @@ import algomania from "../assets/img/algomania.png";
 import realEstate from "../assets/img/realEstate.png";
 import virtualLab from "../assets/img/virtualLab.png";
 import design1 from "../assets/img/Frame 9.png"; // Example design images
-import design2 from "../assets/img/Frame 1.png";
+import design2 from "../assets/img/food.png";
 import design3 from "../assets/img/Home Page.png";
 import design4 from "../assets/img/Home.png";
 import design5 from "../assets/img/Frame 1 (2).png";
@@ -110,31 +110,36 @@ export const Projects = () => {
                           interval={5000}
                           pause="hover"
                           controls={true}
-                          indicators={true}
+                          indicators={false}
+                          className="custom-carousel"
                         >
                           {webProjects.map((project, index) => (
                             <Carousel.Item key={index}>
                               <Row className="align-items-center">
-                                <Col md={6}>
-                                  <img
-                                    src={project.imgUrl}
-                                    alt={project.title}
-                                    className="img-fluid"
-                                  />
-                                </Col>
-                                <Col md={6}>
-                                  <div>
-                                    <h1>{project.title}</h1>
-                                    <p>{project.description}</p>
-                                  </div>
-                                </Col>
-                              </Row>
+                              
+  <Col md={6}>
+    <img
+      src={project.imgUrl}
+      alt={project.title}
+      className="img-fluid"
+    />
+  </Col>
+  
+  {/* Vertical Line */}
+  <div className="vertical-line"></div>
+  
+  <Col md={6}>
+    <h1>{project.title}</h1>
+    <p>{project.description}</p>
+  </Col>
+</Row>
+
+
                             </Carousel.Item>
                           ))}
                         </Carousel>
                       </Tab.Pane>
 
-                      {/* DESIGN */}
                       {/* DESIGN */}
                       <Tab.Pane eventKey="second">
                         <div className="design-section">
