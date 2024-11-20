@@ -1,17 +1,15 @@
 import { Container, Row, Col, Tab, Nav, Carousel } from "react-bootstrap";
-import { ProjectCard } from "./ProjectCard";
+import TrackVisibility from "react-on-screen";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import algomania from "../assets/img/algomania.png";
 import realEstate from "../assets/img/realEstate.png";
 import virtualLab from "../assets/img/virtualLab.png";
-import design1 from "../assets/img/Frame 9.png"; // Example design images
+import design1 from "../assets/img/Frame 9.png";
 import design2 from "../assets/img/food.png";
 import design3 from "../assets/img/Home Page.png";
 import design4 from "../assets/img/Home.png";
 import design5 from "../assets/img/Frame 1 (2).png";
 import design6 from "../assets/img/2.png";
-import "animate.css";
-import TrackVisibility from "react-on-screen";
 
 export const Projects = () => {
   const webProjects = [
@@ -104,7 +102,6 @@ export const Projects = () => {
                         isVisible ? "animate__animated animate__slideInUp" : ""
                       }
                     >
-                      {/* WEB PROJECTS */}
                       <Tab.Pane eventKey="first">
                         <Carousel
                           interval={5000}
@@ -115,59 +112,51 @@ export const Projects = () => {
                         >
                           {webProjects.map((project, index) => (
                             <Carousel.Item key={index}>
-                              <Row className="align-items-center">
-                              
-  <Col md={6}>
-    <img
-      src={project.imgUrl}
-      alt={project.title}
-      className="img-fluid"
-    />
-  </Col>
-  
-  {/* Vertical Line */}
-  <div className="vertical-line"></div>
-  
-  <Col md={6}>
-    <h1>{project.title}</h1>
-    <p>{project.description}</p>
-  </Col>
-</Row>
-
-
+                              <Row
+                                className="align-items-center"
+                                style={{ minHeight: "300px" }}
+                              >
+                                <Col md={6}>
+                                  <img
+                                    src={project.imgUrl}
+                                    alt={project.title}
+                                    className="img-fluid project-img"
+                                  />
+                                </Col>
+                                <Col md={1}>
+                                  <div className="vertical-line"></div>
+                                </Col>
+                                <Col md={5}>
+                                  <div className="project-content">
+                                    <h3>{project.title}</h3>
+                                    <p>{project.description}</p>
+                                  </div>
+                                </Col>
+                              </Row>
                             </Carousel.Item>
                           ))}
                         </Carousel>
                       </Tab.Pane>
 
-                      {/* DESIGN */}
                       <Tab.Pane eventKey="second">
-                        <div className="design-section">
-                          <Row className="g-4">
-                            {designProjects.map((project, index) => (
-                              <Col
-                                key={index}
-                                md={4}
-                                className="d-flex justify-content-center"
-                              >
-                                <div className="design-card">
-                                  <img
-                                    src={project.imgUrl}
-                                    alt={project.title}
-                                    className="design-img"
-                                  />
-                                  <div className="design-details">
-                                    <h4>{project.title}</h4>
-                                    <p className="design-description">
-                                      {project.description}
-                                    </p>
-                                    <a href="#"> Figma </a>
-                                  </div>
+                        <Row>
+                          {designProjects.map((project, index) => (
+                            <Col md={4} key={index}>
+                              <div className="design-card">
+                                <img
+                                  src={project.imgUrl}
+                                  alt={project.title}
+                                  className="design-img"
+                                />
+                                <div className="design-details">
+                                  <h4>{project.title}</h4>
+                                  <p>{project.description}</p>
+                                  <a href="#">Figma</a>
                                 </div>
-                              </Col>
-                            ))}
-                          </Row>
-                        </div>
+                              </div>
+                            </Col>
+                          ))}
+                        </Row>
                       </Tab.Pane>
                     </Tab.Content>
                   </Tab.Container>
