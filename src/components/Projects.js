@@ -16,54 +16,124 @@ export const Projects = () => {
     {
       title: "Algomania",
       description:
-        "An interactive platform for algorithm practice and visualization.",
+        "An inter-department coding competition platform enabling participant registration, real-time progress tracking, and team comparisons. Designed the UI in Figma and implemented dynamic content for a seamless user experience.",
       imgUrl: algomania,
+      techStack: [
+        {
+          name: "Next.js",
+          iconUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+        },
+        {
+          name: "Tailwind CSS",
+          iconUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+        },
+        {
+          name: "PostgreSQL",
+          iconUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+        },
+        {
+          name: "Django",
+          iconUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
+        },
+      ],
+      githubLink: "https://github.com/tanishkhot/Algomania-frontend",
     },
+
+
     {
-      title: "Real Estate Application",
+      title: "DMSL Virtual Lab                      ",
       description:
-        "A full-stack real estate app connecting buyers and sellers.",
-      imgUrl: realEstate,
-    },
-    {
-      title: "Virtual Lab",
-      description:
-        "A virtual platform for students to conduct simulated experiments.",
+        "A virtual DBMS lab providing assignments, videos, MCQs, and an online SQL editor for query practice. Improved hands-on learning by 50% and is set to feature on PICT’s official website.",
       imgUrl: virtualLab,
+      techStack: [
+        {
+          name: "ReactJS",
+          iconUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        },
+        {
+          name: "CSS",
+          iconUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+        },
+      ],
+      githubLink: "https://github.com/Sakshig711/Virtual-lab",
+    },
+
+
+    {
+      title: "Real Estate Web Application",
+      description:
+        "A full-stack platform for real estate with real-time chat, secure JWT-based authentication, and seamless routing with dynamic state management.",
+      imgUrl: realEstate,
+      techStack: [
+        {
+          name: "React",
+          iconUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        },
+        {
+          name: "Node.js",
+          iconUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+        },
+        {
+          name: "MongoDB",
+          iconUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+        },
+        {
+          name: "Socket.io",
+          iconUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg",
+        },
+        {
+          name: "Prisma",
+          iconUrl:
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg",
+        },
+      ],
+      githubLink: "https://github.com/rucharajmane/real-estate",
     },
   ];
+  
 
   const designProjects = [
     {
-      title: "Design 1",
-      description: "A creative UI/UX design for a mobile app.",
+      title: "PIJET Website Design",
       imgUrl: design1,
+      figmaLink: "https://www.figma.com/design/B07eyOKKNUonQTqSjHVYZH/PIJET-(Copy)?node-id=0-1&t=drbfTAG904Zk5UdN-1",
     },
     {
-      title: "Design 2",
-      description: "Logo and branding design for a tech startup.",
+      title: "Food Ordering App",
       imgUrl: design2,
+      figmaLink: "https://www.figma.com/proto/FC2Oia1Y1pfOGGdd7vPhdz/Food-Ordering-App?node-id=111-42&node-type=canvas&t=I9o6sACMaBIEpVD3-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
     },
     {
-      title: "Design 3",
-      description: "Web layout design with responsive elements.",
-      imgUrl: design3,
-    },
-    {
-      title: "Design 4",
-      description: "A modern UI/UX design for a web application.",
-      imgUrl: design4,
-    },
-    {
-      title: "Design 5",
-      description: "A creative UI/UX design for a mobile app.",
-      imgUrl: design5,
-    },
-    {
-      title: "Design 6",
-      description: "Logo and branding design for a tech startup.",
+      title: "Medical Mobile App",
       imgUrl: design6,
+      figmaLink: "https://www.figma.com/proto/L6ez27ugs7BQMyDqyiXEpX/MEDICAL-MOBILE-APP?node-id=1-727&node-type=canvas&t=WzD59NVx5Ct0qRb5-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
     },
+    {
+      title: "NGO Website",
+      imgUrl: design3,
+      figmaLink: "https://www.figma.com/proto/FyFw4ygX2EMdOAuFR4XCs6/NGO-website?node-id=4-16&node-type=canvas&t=ZPg5yKAn0hre99TB-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
+    },
+    {
+      title: "Portfolio Mockup",
+      imgUrl: design4,
+      figmaLink: "https://www.figma.com/proto/n1jlFWaW6C8R7oYwv5wIAu/Portfolio-design?t=gzhbBWh5MC7197RU-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&node-id=1-2&starting-point-node-id=1%3A2",
+    },
+    {
+      title: "Website Design for a Company",
+      imgUrl: design5,
+      figmaLink: "https://www.figma.com/proto/zpzssInofaCSw5c0ZAp0ww/Design-Assignment?node-id=26-76&t=xQWLWBF2c6ZV8xsS-1",
+    },
+    
   ];
 
   return (
@@ -78,11 +148,7 @@ export const Projects = () => {
                     isVisible ? "animate__animated animate__fadeIn" : ""
                   }
                 >
-                  <h2>Projects</h2>
-                  <p>
-                    Explore a selection of my web development projects, each
-                    demonstrating design, functionality, and user experience.
-                  </p>
+                  <h2>PROJECTS</h2>
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Nav
                       variant="pills"
@@ -93,7 +159,7 @@ export const Projects = () => {
                         <Nav.Link eventKey="first">WEB PROJECTS</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="second">DESIGN</Nav.Link>
+                        <Nav.Link eventKey="second">DESIGNS</Nav.Link>
                       </Nav.Item>
                     </Nav>
                     <Tab.Content
@@ -112,32 +178,51 @@ export const Projects = () => {
                         >
                           {webProjects.map((project, index) => (
                             <Carousel.Item key={index}>
-                              <Row
-                                className="align-items-center"
-                                style={{ minHeight: "300px" }}
-                              >
-                                <Col md={6}>
-                                  <img
-                                    src={project.imgUrl}
-                                    alt={project.title}
-                                    className="img-fluid project-img"
-                                  />
-                                </Col>
-                                <Col md={1}>
-                                  <div className="vertical-line"></div>
-                                </Col>
-                                <Col md={5}>
-                                  <div className="project-content">
-                                    <h3>{project.title}</h3>
-                                    <p>{project.description}</p>
-                                  </div>
-                                </Col>
-                              </Row>
-                            </Carousel.Item>
+                            <Row className="row-container align-items-center" style={{ minHeight: "300px" }}>
+                              <Col md={6}>
+                                <img src={project.imgUrl} 
+                                alt={project.title} 
+                                className="img-fluid project-img" />
+                              </Col>
+                            
+                              <Col md={5}>
+                              <div className="project-content">
+                                <h3>{project.title}</h3>
+                                <hr className="divider-line" /> {/* Horizontal line */}
+                                <div className="text-container">
+                                  <p>{project.description}</p>
+                                </div>
+                                {/* Tech stack icons */}
+                                <div className="tech-stack-icons">
+                                  {project.techStack.map((tech, techIndex) => (
+                                    <img
+                                      key={techIndex}
+                                      src={tech.iconUrl}
+                                      alt={tech.name}
+                                      title={tech.name}
+                                      className="tech-icon"
+                                    />
+                                  ))}
+                                </div>
+                                
+                                {/* GitHub Link */}
+                                <div className="github-link">
+                                  <a
+                                    href={project.githubLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                  >
+                                    View on GitHub
+                                  </a>
+                               </div>
+                              </div>
+                              </Col>
+                            </Row>
+                          </Carousel.Item>
+                          
                           ))}
                         </Carousel>
                       </Tab.Pane>
-
                       <Tab.Pane eventKey="second">
                         <Row>
                           {designProjects.map((project, index) => (
@@ -149,10 +234,12 @@ export const Projects = () => {
                                   className="design-img"
                                 />
                                 <div className="design-details">
-                                  <h4>{project.title}</h4>
-                                  <p>{project.description}</p>
-                                  <a href="#">Figma</a>
-                                </div>
+                                  <h2>{project.title}</h2>
+                                  {/* Render the Figma link */}
+                                  <a href={project.figmaLink} target="_blank" rel="noopener noreferrer">
+                                  View on Figma
+                                  </a>
+                               </div>
                               </div>
                             </Col>
                           ))}

@@ -8,7 +8,7 @@ export const Footer = () => {
   return (
     <footer className="footer">
       <Container>
-        <Row className="align-items-center">
+        <Row className="align-items-center-nav">
           {/* Left Column - Text */}
           <Col sm={4} className="text-start">
             <p>

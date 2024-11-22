@@ -1,4 +1,3 @@
-
 import 'react-multi-carousel/lib/styles.css';
 import colorSharp from "../assets/img/color-sharp.png"
 
@@ -30,7 +29,7 @@ export const Skills = () => {
                 <div className="col-12">
                     <div className="skill-bx wow zoomIn">
                         <h2>Skills</h2>
-                        <p>As a passionate frontend developer and designer, I bring a blend of technical skills and creative vision. I’m proficient in web development, building visually compelling interfaces, crafting brand identities, and designing logos that stand out.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
+                        <p>As a passionate frontend developer and designer, I bring a blend of technical skills and creative vision. I’m proficient in web development, building visually compelling interfaces, crafting brand identities, and designing logos that stand out.<br></br></p>
                         <div className="skills-grid">
                         <div className="skill-category">
                             <h3>Programming Languages</h3>

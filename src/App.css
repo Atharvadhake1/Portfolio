@@ -14,6 +14,61 @@
 	src: url('./assets/font/CentraNo2-Book.ttf');
 	font-weight: 400;
 }
+@font-face {
+  font-family: 'CustomFont';
+  src: url('./assets/font/Audrey-BoldOblique.otf') format('opentype'); /* Specify the file format */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'zefani';
+  src: url('./assets/font/behance-645d29c6246f6.otf') format('opentype'); /* Specify the file format */
+  font-weight:100;
+  font-style:oblique;
+}
+@font-face {
+  font-family: 'reigo';
+  src: url('./assets/font//Reigo-Black.ttf') format('opentype'); /* Specify the file format */
+  font-weight:100;
+  font-style:italic;
+}
+@font-face {
+  font-family: 'font1';
+  src: url('./assets/font/behance-642b1725cb90a.otf') format('opentype'); /* Specify the file format */
+  font-weight:100;
+  font-style:italic;
+}
+@font-face {
+  font-family: 'font2';
+  src: url('./assets/font/behance-63fef7f62043c.ttf') format('opentype'); /* Specify the file format */
+  font-weight:100;
+  font-style:italic;
+}
+@font-face {
+  font-family: 'font3';
+  src: url('./assets/font/behance-64a1e28b4ba30.ttf') format('opentype'); /* Specify the file format */
+  font-weight:100;
+  font-style:italic;
+}
+@font-face {
+  font-family: 'font4';
+  src: url('./assets/font/behance-6462534a975cf.ttf') format('opentype'); /* Specify the file format */
+  font-weight:700;
+  font-style:normal;
+}
+@font-face {
+  font-family: 'font5';
+  src: url('./assets/font/behance-636b79439b4c3.otf') format('opentype'); /* Specify the file format */
+  font-weight:700;
+  font-style:normal;
+}
+@font-face {
+  font-family: 'letsee';
+  src: url('./assets/font/Ampunsuhu.otf') format('opentype'); /* Specify the file format */
+  font-weight:700;
+  font-style:normal;
+}
+
 
 /************ Default Css ************/
 * {
@@ -95,10 +150,13 @@ nav.navbar.scrolled {
   background-color: #121212;
 }
 nav.navbar a.navbar-brand {
+    font-family: zefani;
+    font-size: larger;
     width: auto;
-    color: #fff;
+    margin-top: 10px;
+    color: #ffffff;
     font-size: 40px;
-    font-weight: 700;
+    font-weight: 500;
     transition: color 0.3s ease-in-out;
 }
 nav.navbar a.navbar-brand:hover {
@@ -106,12 +164,17 @@ nav.navbar a.navbar-brand:hover {
   opacity: 0.8; 
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
-  font-weight: 400;
+  font-weight: 700;
   color: #fff !important;
   letter-spacing: 0.8px;
   padding: 0 15px;
-  font-size: 18px;
+  font-size: 20px;
   opacity: 0.75;
+  text-shadow: 
+    0 0 10px rgba(170, 54, 124, 0.8), /* Inner pink glow */
+    0 0 20px rgba(170, 54, 124, 0.8), /* Medium pink glow */
+    0 0 30px rgba(74, 47, 189, 0.8), /* Inner blue glow */
+    0 0 50px rgba(74, 47, 189, 0.8); /* Outer blue glow */
 }
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
@@ -211,6 +274,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	border-color: transparent;
 }
 
+nav.navbar .navbar-toggler:hover .navbar-toggler-icon:before,
+nav.navbar .navbar-toggler:hover .navbar-toggler-icon:after {
+  font-family: 'Roboto', sans-serif;
+  transition: font-family 0.3s ease;
+}
+
 /************ Banner Css ************/
 .banner {
   margin-top: 0;
@@ -239,6 +308,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: block;
 }
 .banner p {
+  font-family: reigo;
+  font-weight: 100;
   color: #B8B8B8;
   font-size: 18px;
   letter-spacing: 0.8px;
@@ -294,6 +365,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-top: 0px;
 }
 .skill h2 {
+  font-family: font1;
 	font-size: 45px;
 	font-weight: 700;
 }
@@ -326,6 +398,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .skill-category{
+  font-size: larger;
   margin-top: 30px;
 }
 
@@ -371,24 +444,30 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .project h2 {
-  font-size: 45px;
+  font-family: font5;
+  font-size: 80px;
   font-weight: 700;
+  text-align: center;
+  padding-bottom: 20px;
+  margin-top: -60px;
+}
+
+.project h3{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 50px;
+  margin-top: -90px;
   text-align: center;
 }
 
 .project p {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: #B8B8B8;
   font-size: 1rem;
   text-align: center;
   letter-spacing: 0.8px;
   line-height: 1.5em;
-<<<<<<< HEAD
-  text-align:center ;
-=======
->>>>>>> 9ff6567cfb837ccb78aeda6a8b6a74a2fbe63046
-  width: 60%; /* Slightly increased width for better readability */
+  width: 60%;
 }
-
 
 .project h1 {
   font-size: 2.8rem;
@@ -402,6 +481,56 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 10px;
 }
 
+.project-content{
+  position: relative;
+  top: 50%;
+  padding-top: 50px;
+}
+.project-content p{
+  text-align: left;
+  width: 100%;
+  text-align:justify;
+}
+
+.divider-line{
+  height: 5px;
+  color: white;
+  box-shadow: 0 0 10px white, 
+              0 0 20px white, 
+              0 0 40px white, 
+              0 0 80px white;
+}
+
+.row-right-shift {
+  margin-left: 70px; /* Adjust to control the shift */
+}
+.row-right-shift {
+  margin-left: 200px; /* Moves the entire rectangle to the right */
+  background-color: #202020; /* Example background color */
+  border: 1px solid #ddd; /* Optional border for visual clarity */
+  padding: 5px; /* Optional for internal spacing */
+}
+
+.row-container {
+  margin-left: 10px; /* Slightly shifts the rectangle */
+  padding-left: 10px; /* Shortens the rectangle from the left */
+  box-sizing: border-box;
+  background-color: #202020;
+}
+
+.align-items-center-nav
+{
+  border: 1px solid #fff;
+  width: 99%;
+  border-radius: 10px;
+  align-items : center;
+  margin-left: 80px;
+}
+
+.align-items-center-right {
+  margin-left: 20px; /* Adjust the value to achieve the desired shift */
+  position: relative; /* Ensures proper layout adjustments */
+}
 
 .project .nav.nav-pills {
   width: 60%;
@@ -443,7 +572,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transition:0.3ms ease-in;
 }
 
-
 .project .nav.nav-pills .nav-link.active::before {
   content: "";
   position: absolute;
@@ -478,8 +606,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-color: #fff;
 }
 
-
-
 .background-image-right {
   top: 20%;
   position: absolute;
@@ -489,15 +615,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
-
-.vertical-line {
-  width: 2px; /* Adjust line thickness */
-  background-color: #ccc; /* Visible color */
-  height: 100%; /* Ensures full height of parent */
-  margin: 0 auto; /* Centers the line within the column */
-}
-
-
 @media (max-width: 767px) {
   .design-card {
     width: 100%;
@@ -506,7 +623,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .carousel-indicators{
-  margin: 50px;
+  margin: 20px;
 }
 
 .custom-carousel .carousel-control-prev,
@@ -515,18 +632,57 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .custom-carousel .carousel-control-prev {
-  left: -50px;
+  left: -0px;
 }
 
 .custom-carousel .carousel-control-next {
-  right: -50px;
+  right: -0px;
 }
 
-.custom-carousel .carousel-control-prev-icon,
-.custom-carousel .carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
+.tech-stack {
+  margin-top: 15px;
 }
+
+.tech-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tech-icon {
+  width: 50px;
+  height: 50px;
+  padding-left: 10px;
+  margin-right: 20px;
+  transition: transform 0.3s ease;
+}
+
+.tech-icon:hover {
+  transform: scale(1.2);
+}
+
+.github-link {
+  margin-top: 20px;
+}
+
+.github-link a {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #ffffff;
+  background-color: #3b3b3b;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 8px; /* Rounded corners */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 1.9); /* Subtle shadow */
+}
+
+.github-link a:hover { 
+  color: #007bff;
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+
 
 /********Design Card***********/
 
@@ -549,8 +705,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   max-width: 500px; /* Increased max width for the cards */
   margin: 10px;
   background-color:#121212;
-  border: 1px solid #ddd;
-  padding: 20px;
+  border: 2px solid #ddd;
+  padding: 30px;
   text-align: center;
   transition: transform 0.3s ease;
 }
@@ -569,7 +725,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 {
   width: 100%;
 	height: 0;
-	background: linear-gradient(transparent,#242424 90%);
+	background: linear-gradient(transparent,#313131 95%);
 	border-radius: 10px;
 	position: absolute;
 	left: 0;
@@ -585,32 +741,33 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	transition: height 0.5s;
 }
 
-.design-details h4 {
+.design-details h2 {
 	font-weight: bolder;
-	margin-bottom: 5px;
+	margin-bottom: 15px;
 	margin-top: 80%;
 	font-size: 30px;
 	letter-spacing: 2px;
 }
 
 .design-card:hover img{
-    transform: scale(1.16);
+    transform: scale(1.06);
 }
 .design-card:hover .design-details{
     height: 200%;
 }
 
 .design-details a {
-	margin-top: 10px;
+	margin-top: 30px;
 	color: #262626;
 	text-decoration: none;
-	font-size: 14px;
+	font-size: 16px;
 	background: #fff;
 	border-radius: 50px;
 	text-align: center;
-	padding: 5px 15px;
+	padding: 10px 25px;
+  display: inline-block;
+  transition: all 0.3s ease;
 }
-
 
 /********Design Card***********/
 .contact {
@@ -621,6 +778,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 92%;
 }
 .contact h2 {
+  font-family: font2;
 	font-size: 45px;
 	font-weight: 700;
   margin-bottom: 30px;
@@ -781,9 +939,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: inline-flex;
   background: rgba(217, 217, 217, 0.1);
   border-radius: 50%;
-  justify-content: center;
   border: 1px solid rgba(255, 255, 255, 0.5);
   position: relative;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 .social-icon a img {
   width: 50%;
@@ -791,9 +949,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   object-fit: contain;
 }
 
-.social-icon a {
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
 .social-icon a:hover {
   background-color: rgba(255, 255, 255, 0.2);
   transform: scale(1.1);

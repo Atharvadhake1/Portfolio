@@ -85,9 +85,11 @@ export const Banner = () => {
                     deploying full-stack applications. Looking forward to
                     connecting and building innovative solutions!
                   </p>
+                  <a href = "#connect">
                   <button onClick={() => console.log("connect")}>
                     Let’s Connect <ArrowRightCircle size={25} />
                   </button>
+                  </a>
                 </div>
               )}
             </TrackVisibility>
