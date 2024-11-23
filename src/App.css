@@ -171,10 +171,10 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
   font-size: 20px;
   opacity: 0.75;
   text-shadow: 
-    0 0 10px rgba(170, 54, 124, 0.8), /* Inner pink glow */
-    0 0 20px rgba(170, 54, 124, 0.8), /* Medium pink glow */
-    0 0 30px rgba(74, 47, 189, 0.8), /* Inner blue glow */
-    0 0 50px rgba(74, 47, 189, 0.8); /* Outer blue glow */
+    0 0 10px rgba(170, 54, 124, 0.5), /* Inner pink glow */
+    0 0 20px rgba(170, 54, 124, 0.5), /* Medium pink glow */
+    0 0 30px rgba(74, 47, 189, 0.5), /* Inner blue glow */
+    0 0 50px rgba(74, 47, 189, 0.5); /* Outer blue glow */
 }
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
@@ -316,12 +316,17 @@ nav.navbar .navbar-toggler:hover .navbar-toggler-icon:after {
   line-height: 1.5em;
   width: 96%;
 }
+
+.banner a {
+  text-decoration: none;
+}
 .banner button {
-  color: #fff;
+  color: #ffffff;
   font-weight: 700;
   font-size: 20px;
   margin-top: 60px;
   letter-spacing: 0.8px;
+  text-decoration: none;
   display: flex;
   align-items: center;
 }
@@ -493,7 +498,7 @@ nav.navbar .navbar-toggler:hover .navbar-toggler-icon:after {
 }
 
 .divider-line{
-  height: 5px;
+  height: 1px;
   color: white;
   box-shadow: 0 0 10px white, 
               0 0 20px white, 
